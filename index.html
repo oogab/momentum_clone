@@ -1,0 +1,99 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer src="./index.js"></script>
+</head>
+
+<body>
+  <div class="main_container">
+    <section>
+      <!-- setting -->
+      <div class="setting-part">
+        <i class="fas fa-cog fs-2 setting-button"></i>
+        <div class="setting-body setting-body-hide bg-dark my-2 p-3 rounded-3" >
+          <div class="d-flex">
+            <div style="margin: auto 0px;">24-hour clock</div>
+            <span class="toggle-switch" style="margin-left: 15px;">
+              <span class="toggle-knob"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timer -->
+      <div class="timer-part">
+        <div class="timer-wrapper d-flex justify-content-center align-content-center">
+          <div class="timer"></div>
+        </div>
+      </div>
+
+      <!-- Greeting -->
+      <div class="greeting-wrapper">
+        <div class="d-flex justify-content-center">
+          <div class="timer-content"></div>
+          <div class="timer-content">, WOOK</div>
+        </div>
+      </div>
+
+      <!-- Write memo -->
+      <div class="m-3 d-flex justify-content-center">
+        <input type="text" class="memo-input bg-transparent text-white" placeholder="오늘 할일을 입력하세요">
+      </div>
+
+      <!-- Show memo -->
+      <div class="memo-wrapper">
+        <div class="memo-title">TODAY</div>
+        <div class="memo"></div>
+      </div>
+
+      <!-- Quote part -->
+      <div class="quote-wrapper d-flex justify-content-center fixed-bottom mb-3 fs-5 text-center">
+        <div class="quote"></div>
+      </div>
+
+      <!-- Modal part -->
+      <!-- Button trigger weather modal -->
+      <div class="modal-button-wrapper text-center">
+        <div class="modal-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        </div>
+        <div class="modal-button-text">
+        </div>
+      </div>
+
+      <!-- Weather Modal -->
+      <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content bg-transparent border-0">
+            <div class="modal-header border-0">
+              <h5 class="modal-title" id="exampleModalLabel">날씨</h5>
+              <!-- btn-close-white 적용이 이상하게 된다. -->
+              <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+              <div class="modal-footer border-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</body>
+
+</html>
